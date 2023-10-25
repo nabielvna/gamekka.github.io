@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonogram Solver</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container text-center mt-5">
+        <div class="custom-container">
+            <h1>Nonogram Solver</h1>
+            <form id="nonogramForm">
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="form-group mr-2">
+                        <label for="rows">Jumlah Baris</label>
+                        <input type="number" class="form-control" id="rows" required>
+                    </div>
+                    <div class="form-group ml-2">
+                        <label for="cols">Jumlah Kolom</label>
+                        <input type="number" class="form-control" id="cols" required>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-group mr-2">
+                        <label for="rowValues">Angka pada Baris</label>
+                        <input type="text" class="form-control" id="rowValues" required>
+                        <small class="form-text text-muted">Contoh: 1 2,3 1</small>
+                    </div>
+        
+                    <div class="form-group ml-2">
+                        <label for="colValues">Angka pada Kolom</label>
+                        <input type="text" class="form-control" id="colValues" required>
+                        <small class="form-text text-muted">Contoh: 1 2,3 1</small>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary mr-2" onclick="displayNonogramGrid()">Display</button>
+                    <button type="button" class="btn btn-success ml-2" onclick="solveNonogram()">Solve</button>
+                </div>
+            </form>
+            <!-- Grid container-->
+            <div id="gridContainer" class="mt-4" style="display: flex; justify-content: center;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
