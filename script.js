@@ -4,6 +4,11 @@ function displayNonogramGrid() {
     var rowArray = document.getElementById('rowValues').value.split(',');
     var colArray = document.getElementById('colValues').value.split(',');
 
+    if (isNaN(rows) || isNaN(cols)) {
+        alert("Harap isi kedua kolom Jumlah Baris dan Jumlah Kolom.");
+        return;
+    }
+
     console.log(rowArray);
     console.log(colArray);
 
